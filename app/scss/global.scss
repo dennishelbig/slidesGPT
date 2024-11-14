@@ -1,0 +1,63 @@
+@use './reset.scss';
+
+body, html{
+  background: #333;
+}
+
+#app{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#page {
+  width: calc(var(--width) * 1in);
+  width: 1000px;
+  height: 500px;
+  aspect-ratio: calc(var(--width) / var(--height));
+  position: relative;
+  
+  background-color: var(--backgroundColor);
+  background-image: var(--backgroundImage);
+
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+#container {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--colorText);
+  position: absolute;
+
+  left: calc(var(--paddingLeft) * 1in);
+  right: calc(var(--paddingRight) * 1in);
+  top: calc(var(--paddingTop) * 1in);
+  bottom: calc(var(--paddingBottom) * 1in);
+
+  p {
+    font-size: var(--fontSizeP);
+  }
+
+  h1 {
+    font-size: var(--fontSizeH1);
+    text-transform: var(--textTransformH1);
+  }
+
+  h2 {
+    font-size: var(--fontSizeH2);
+  }
+
+  h3 {
+    font-size: var(--fontSizeH3);
+  }
+}
