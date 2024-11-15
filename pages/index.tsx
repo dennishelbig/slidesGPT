@@ -1,11 +1,19 @@
 import { useState, useEffect, useRef } from 'react';
 import loadStyles from '@/app/helper/loadStyles';
+import TitleAndTwoColumns from '@/components/title_and_two_columns';
 import '@/app/scss/global.scss';
+
+
+import content1 from '@/content/title_and_two_columns_1/sources.json';
+import content2 from '@/content/title_and_two_columns_2/sources.json';
+import content3 from '@/content/title_and_two_columns_3/sources.json';
 
 
 export default function Home() {
   const [zoomFactor, setZoomFactor] = useState(1);
   const pageRef = useRef<HTMLDivElement>(null);
+  const [props, setProps] = useState({});
+  const [data, setData] = useState({});
 
 
 
@@ -24,16 +32,41 @@ export default function Home() {
   };
 
 
-  const switchStyles = (project:string) => {
-    loadStyles(project);
+  const switchStyles = async (project:string) => {
+    const propsReturn = await loadStyles(project);
+    setProps(propsReturn);
   };
+
+
+
+  const loadContent = (content:string) => {
+    switch (content) {
+      case '1':
+        setData(content1);
+        break;
+      case '2':
+        setData(content2);
+        break;
+      case '3':
+        setData(content3);
+        break;
+      default:
+        setData(content1);
+    }
+  };
+
+
 
 
   useEffect(() => {
     // Execute the zoomPage function with a factor of 0.8 on mount
     zoomPage();
 
-    loadStyles('chatgpt');
+
+    setData(content1);
+    switchStyles('chatgpt');
+
+
 
     // Add event listener for window resize
     const handleResize = () => {
@@ -55,16 +88,25 @@ export default function Home() {
 
   return (
     <div id="app">
+
       <div className="buttons">
+        <button onClick={() => loadContent('1')}>Content 1</button>
+        <button onClick={() => loadContent('2')}>Content 2</button>
+        <button onClick={() => loadContent('3')}>Content 3</button>
+
+        <div className="spacer"></div>
+     
         <button onClick={() => switchStyles('chatgpt')}>chatGPT</button>
-        <button onClick={() => switchStyles('other')}>other</button>
+        <button onClick={() => switchStyles('slidesgpt')}>slidesgpt</button>
+        <button onClick={() => switchStyles('slidesgpt_purple')}>slidesgpt purple</button>
       </div>
+
+
+
+
       <div id="page" ref={pageRef} style={{ zoom: zoomFactor }}>
         <div id="container">
-          <h1>Headline 1</h1>
-          <h2>headline 2</h2>
-          <h3>headline 3</h3>
-          <p>Paragraph</p>
+          <TitleAndTwoColumns data={data} props={props} />
         </div>
       </div>
     </div>

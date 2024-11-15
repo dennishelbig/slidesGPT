@@ -1,4 +1,10 @@
+
 @use './reset.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 body, html{
   background: #333;
@@ -19,8 +25,6 @@ body, html{
 
 #page {
   width: calc(var(--width) * 1in);
-  width: 1000px;
-  height: 500px;
   aspect-ratio: calc(var(--width) / var(--height));
   position: relative;
   
@@ -35,29 +39,78 @@ body, html{
 }
 
 #container {
-  background: rgba(255, 255, 255, 0.1);
+  // background: rgba(255, 255, 255, 0.1);
   color: var(--colorText);
   position: absolute;
 
-  left: calc(var(--paddingLeft) * 1in);
-  right: calc(var(--paddingRight) * 1in);
-  top: calc(var(--paddingTop) * 1in);
-  bottom: calc(var(--paddingBottom) * 1in);
+  left: calc(var(--marginLeft) * 1in);
+  right: calc(var(--marginRight) * 1in);
+  top: calc(var(--marginTop) * 1in);
+  bottom: calc(var(--marginBottom) * 1in);
+  text-align: var( --textAlignment );
+
 
   p {
     font-size: var(--fontSizeP);
   }
 
+
   h1 {
     font-size: var(--fontSizeH1);
     text-transform: var(--textTransformH1);
+    min-height: 3em;
+    line-height: 1.1;
   }
+
 
   h2 {
     font-size: var(--fontSizeH2);
   }
 
+
   h3 {
-    font-size: var(--fontSizeH3);
+    font-size: var( --fontSizeH3 );
+  }
+
+
+  figcaption{
+    font-size: var( --fontSizeCaption );
+  }
+
+}
+
+
+
+pre{
+  background: black;
+  color: white;
+  max-width: 100vw;
+  font-size: 10px;
+}
+
+
+.buttons{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  gap: 20px;
+
+  display: flex;
+  justify-content: center;
+
+  .spacer{
+    flex: 1;
+  }
+
+  button{
+    background: white;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    &:hover{
+      background: #444;
+    }
   }
 }

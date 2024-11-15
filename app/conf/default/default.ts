@@ -1,23 +1,29 @@
-import type ContainerInterface from '@/interfaces/container';
+import type fontInterface from '@/interfaces/font';
 import type pageInterface from '@/interfaces/page';
 
-interface PropsInterface extends pageInterface, ContainerInterface {}
+interface PropsInterface extends pageInterface, fontInterface {}
 
 // props in inches
 const defaultProps: PropsInterface = {
-  fontSizeP: '1rem',
-  fontSizeH1: '2rem',
+  fontSizeP: '16pt',
+  fontSizeH1: '32pt',
   textTransformH1: 'unset',
-  fontSizeH2: '1.7rem',
-  fontSizeH3: '1.5rem',
+  fontSizeH2: '26pt',
+  fontSizeH3: '20pt',
+  fontSizeCaption: '11pt',
+  textAlignment: 'left',
+  listStyle: {
+    type: 'disc'
+  },
+
   width: 8,
   height: 6,
-  paddingTop: 1,
-  paddingRight: 0.75,
-  paddingBottom: 0.5,
-  paddingLeft: 0.75,
+  marginTop: 1,
+  marginRight: 0.75,
+  marginBottom: 0.5,
+  marginLeft: 0.75,
   backgroundColor: '#f8f8f8',
-  colorText: '#black'
+  colorText: '#black',
 };
 
 export default defaultProps;

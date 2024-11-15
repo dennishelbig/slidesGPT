@@ -1,0 +1,32 @@
+{
+    "title": "Economic Structure of the Roman Empire",
+    "subtitle": "Trade, Currency, and Social Hierarchy",
+    "slidenum": 2,
+    "img_alt_text": "Ancient Roman coins and a map of trade routes",
+    "body": [
+        {
+            "point": "Complex Trade Networks",
+            "description": "The Roman Empire boasted extensive trade networks that connected it to remote regions, including Asia, Africa, and Northern Europe. These networks facilitated the exchange of goods such as spices, silk, and precious metals, underpinning the empire's economy."
+        },
+        {
+            "point": "Currency and Economy",
+            "description": "Roman currency, including the denarius, played a crucial role in facilitating trade and commerce throughout the empire. The economy was diverse, featuring agriculture, mining, and manufacturing as key sectors."
+        },
+        {
+            "point": "Social Hierarchy and Economy",
+            "description": "The economic structure was closely tied to the social hierarchy, with slaves and freedmen at the bottom performing labor-intensive tasks, while the patrician class engaged in governance and military leadership, influencing economic policies and distribution of wealth."
+        }
+    ],
+    "talktrack": "Team celebrations play a crucial role in fostering a positive and collaborative work environment. By recognizing and appreciating the collective efforts of teams, we reinforce the value of collaboration, teamwork, and shared success. This includes acknowledging the contributions of team members, expressing gratitude, and celebrating milestones achieved through collective effort. Recognizing and rewarding teams is an effective way to boost morale, enhance camaraderie, and inspire continued collaboration towards shared goals.",
+    "caption": "A celebratory team gathering with awards and recognition being presented to team members",
+    "image": {
+        "author_handle": "@emilianovittoriosi",
+        "author_name": "Emiliano Vittoriosi",
+        "caption": "a black and white photo of a wall with many certificates sant'anastasia in Sant'Anastasia, Italy. tags: via oasi sacro cuore, 80048 sant'anastasia na, italy",
+        "image_id": "https://picsum.photos/id/49/300/200",
+        "orientation": "square",
+        "retrieval": "clip"
+    },
+    "master_id": "1fWyPYq3dbEegjnVUm6ZtfdK6rU3i_gzO",
+    "layout": "Title and two columns"
+}
